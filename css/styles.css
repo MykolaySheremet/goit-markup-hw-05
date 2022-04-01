@@ -95,6 +95,7 @@ address {
   
   margin-right: 10px;
   fill:var(--second-color-text);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .second-color-logo{
@@ -110,6 +111,7 @@ address {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-color-text);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-list:hover,
 .nav-list:focus{
@@ -126,6 +128,7 @@ address {
   line-height: 1.14
   letter-spacing: 0.02em;
   color: var(--second-color-text);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-contact:hover{
   color: var(--accent-color);
@@ -175,7 +178,7 @@ address {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px; 
   border: none;
-
+  transitionn: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-button:hover,
 .main-button:focus{
@@ -331,6 +334,7 @@ address {
 }
 .svg-links{
   fill: var(--icon-colors);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-links{
   display: flex;
@@ -339,6 +343,7 @@ address {
   width: 44px;
   height: 44px;                 
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .social-links:hover .svg-links,
@@ -359,9 +364,11 @@ address {
   border: 1px solid;             
   border-radius: 4px;
   color: var(--icon-colors);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-clients{
   fill: var(--icon-colors);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:hover .icon-clients,
 .clients-link:focus .icon-clients{
@@ -401,6 +408,7 @@ address {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .addressfoot{
@@ -409,6 +417,7 @@ address {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--third-color-text);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 .addressfoot:hover,
@@ -452,7 +461,7 @@ address {
 }
 .foot-links .social-links{
   background-color: rgba(255, 255, 255, 10%);
- 
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .foot-links .list-links:not(:last-child){
   margin-right: 10px;
@@ -494,12 +503,15 @@ address {
   color: var(--main-color-text);
   background-color: var(--third-background-color);
   padding: 6px 20px;
- }
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .button-port:hover,
 .button-port:focus{
- box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 
- 0px 1px 2px rgba(0, 0, 0, 0.08), 
- 0px 3px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 
+  0px 1px 2px rgba(0, 0, 0, 0.08), 
+  0px 3px 1px rgba(0, 0, 0, 0.1);
+  color: var(--third-color-text);
+  background-color: var(--accent-color);
 } 
 .second-but{
 min-width: 128px;
@@ -512,12 +524,6 @@ min-width: 103px;
 }
 .fifth-but{
 min-width: 130px;
-}
-
-.button-port:hover,
-.button-port:focus{
-  color: var(--third-color-text);
-  background-color: var(--accent-color);
 }
 /* styles list of pictures */
 .img-portfolio{
@@ -533,6 +539,7 @@ min-width: 130px;
 }
 .portfolio-links-card{
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-links-card:hover,
 .portfolio-links-card:focus{
@@ -560,6 +567,31 @@ min-width: 130px;
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--second-color-text);
+}
+.card-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.overlay-portfolio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--third-color-text);
+  background-color: rgba(33, 150, 243, 0.9);
+  overflow: auto;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-links-card:hover .overlay-portfolio,
+.portfolio-links-card:focus .overlay-portfolio {
+  transform: translateY(0%);
 }
 
 /* Пробы */
