@@ -106,6 +106,7 @@ address {
 }
 
 .nav-list{
+  position: relative;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -116,6 +117,17 @@ address {
 .nav-list:hover,
 .nav-list:focus{
   color: var(--accent-color);
+}
+.curent::after{
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom:-32px;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius:2px;
+  background-color: var(--accent-color);
 }
 .nav-list.curent{
   color: var(--accent-color);
@@ -151,10 +163,6 @@ address {
   margin-left: auto;
   margin-right: auto;
 }
-/* .hero-section .container{
-  padding-top: 200px;
-  padding-bottom: 200px;
-} */
 .main-header{
   font-weight: 900;
   font-size: 44px;
